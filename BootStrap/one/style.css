@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    font-family: sans-serif;
+
+}
+
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    
+}
+.navbar{
+    background-image: linear-gradient(to right,#a517ba,#5f1782);
+    padding: 0 !important;
+}
+
+.navbar-brand img{
+    height: 50px;
+    padding-left: 20px;
+}
+.nav-item a{
+    color: rgb(255, 255, 255) !important;
+    font-weight: 600;
+    
+}
+.dropdown-menu a{ 
+    color: black !important;
+
+}
+.navbar-toggler{
+    color: aliceblue !important;
+    outline: none !important;
+}
+/* banner */
+#banner{
+    background-image: linear-gradient(to right,#a517ba,#5f1782);
+    color: aliceblue;
+    padding-top: 5%;
+
+}
+.promo-title{
+    font-size: 40px;
+    font-weight: 600;
+    
+}
+.play-btn{
+    width: 45px;
+    margin: 20px;
+
+}
+#banner a {
+    color: #fff;
+    text-decoration: none;
+}
+.bottom-img{
+    width: 100%;
+}
+
+/* services */
+
+#services{
+    padding: 80px 0;
+
+}
+
+.service-img{
+    width: 150px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.services h4{
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#services .btn{
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    background-image:linear-gradient(to right,#a517ba,#5f1782);
+}
+
+
+#about-us{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background:rgb(192, 191, 191)
+}
+.about-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 5%;
+    margin-left: 20px;
+
+}
+#about-us ul li{
+    margin: 10px 0  ;
+}
+
+#about-us ul {
+    margin-left: 30px;
+}
+
+/* TESTIMONIALS */
+#testimonials{
+  margin: 10px 100px; 
+}
+.testimonials{
+
+    border-left: 4px solid #7b1798 ;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+.testimonials img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 10px;
+
+}
+.user-detail{
+    display: inline-block;
+    font-size: 15px;
+
+}
+.container h1{
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* SOCAIL MEDIA  */
+
+#social-media{
+    background-color: rgb(247, 247, 247);
+    padding: 100px 0;
+}
+#social-media p{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.socail-icons img{
+    width: 60px;
+    transition: 0.5s;
+
+}
+.socail-icons a:hover img{
+    transform: translatey(-10px);
+}
+
+
+/* footer section  */
+#footer{
+    background-image: linear-gradient(to right,#a517ba,#5f1782) ;
+    color: fff;
+}
+#footer img{
+    width: 100%;
+}
+
+.footer-box{
+    padding: 20px;
+    color: #fff;
+}
+.footer-box img{
+    width: 120px;
+    margin-bottom: 20px;
+}
+#footer .btn{
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+hr{
+    background-color: #fff;
+}
+.copyright{
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    
+}
