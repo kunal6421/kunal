@@ -6,6 +6,7 @@ let addBtn = document.getElementById('addBtn');
 
 addBtn.addEventListener("click", function (e) {
     let addTxt = document.getElementById("addTxt");
+    let addTitle = document.getElementById("addTitle");
     let notes = localStorage.getItem("notes");
     if (notes == null) {
         notesobj = [];
@@ -13,9 +14,14 @@ addBtn.addEventListener("click", function (e) {
     else {
         notesobj = JSON.parse(notes);
     }
-    notesobj.push(addTxt.value);
+    let myObj = {
+        title: addTitle.value,
+        text: addTxt.value
+    }
+    notesobj.push(myObj);
     localStorage.setItem("notes", JSON.stringify(notesobj));
     addTxt.value = "";
+    addTitle.value = "";
     // console.log(notesobj);
     showNotes();
 
@@ -39,8 +45,8 @@ function showNotes() {
         html += `
         <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
                 <div class="card-body">
-                  <h5 class="card-title">Note ${index + 1}</h5>
-                  <p class="card-text">${element}</p>
+                  <h5 class="card-title">${element.title}</h5>
+                  <p class="card-text">${element.text}</p>
                   <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete note</button>
                 </div>
         </div>`
@@ -79,15 +85,15 @@ search = document.getElementById('searchTxt');
 search.addEventListener("input", function () {
 
     // console.log('input event fired');
-    let inputVal=search.value.toLowerCase()
-    let noteCard=document.getElementsByClassName('noteCard')
-    Array.from(noteCard).forEach(function(element){
-        let cardTxt=element.getElementsByTagName("p")[0].innerText;
-        if(cardTxt.includes(inputVal)){
-            element.style.display='block'
+    let inputVal = search.value.toLowerCase()
+    let noteCard = document.getElementsByClassName('noteCard')
+    Array.from(noteCard).forEach(function (element) {
+        let cardTxt = element.getElementsByTagName("p")[0].innerText;
+        if (cardTxt.includes(inputVal)) {
+            element.style.display = 'block'
         }
-        else{
-            element.style.display='none'
+        else {
+            element.style.display = 'none'
         }
     })
 
